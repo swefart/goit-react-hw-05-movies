@@ -22,7 +22,7 @@ const Cast = () => {
             }
         }
         getCredits();
-    }, [credits])
+    }, [credits, movieId])
 
     const castImgUrl = path => {
         return path ? baseUrlImg + path : 'https://creazilla-store.fra1.digitaloceanspaces.com/emojis/46301/bust-in-silhouette-emoji-clipart-xl.png';

@@ -20,7 +20,7 @@ const Movie = () => {
                 const { data } = await fetchMovies.getMovieByID(movieId)
                 setMovie({ ...data })
             } catch {
-                console.error(new Error)
+                console.error(new Error())
             }
            
         }

@@ -19,7 +19,7 @@ const Movies = () => {
                 setMovies([...results])
             }
             catch {
-
+                console.error(new Error())
             }
         }
         getMovies()
@@ -36,6 +36,7 @@ const Movies = () => {
         form.reset();
 
     }
+    
 
     return (
         <div className="container">

@@ -16,7 +16,7 @@ const Home = () => {
 
             }
             catch {
-
+                console.error(new Error())
             }
         }
         getMovies()

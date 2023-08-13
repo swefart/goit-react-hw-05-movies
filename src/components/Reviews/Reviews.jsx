@@ -20,7 +20,7 @@ const Reviews = () => {
             }
         }
         getReviews()
-    }, [reviews])
+    }, [reviews, movieId])
 
 
     const { results } = reviews;
