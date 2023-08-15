@@ -11,7 +11,7 @@ const MoviesList = ({movies}) => {
                 {movies.map(({ id, title }) => {
                     return (
                         <TrandItem key={id}>
-                        <TrandItemLink to={`/movies/${id}`} state={location}>{title }</TrandItemLink>
+                        <TrandItemLink to={`/movies/${id}`} state={{from : location}}>{title }</TrandItemLink>
                     </TrandItem>
                     )
                     

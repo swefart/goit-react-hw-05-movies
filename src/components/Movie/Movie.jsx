@@ -4,6 +4,7 @@ import { Outlet, useLocation, useParams } from "react-router-dom";
 import { Back, MovieBox, Poster, InfoBox, Title, Overview, Genres, Description, InfoList, InfoItem, InfoLink, SubTitle } from "./Movie.styled";
 import { fetchMovies } from "Api/FetchMovies";
 import {BsArrowLeftShort} from 'react-icons/bs'
+import { useRef } from "react";
 
 
 const Movie = () => {
@@ -11,7 +12,8 @@ const Movie = () => {
     const { movieId } = useParams();
     const basePosterUrl = 'https://image.tmdb.org/t/p/w500/';
     const location = useLocation();
-    console.log(location)
+    const backLinkLocation =useRef(location.state?.from ?? "/")
+
 
     useEffect(() => {
 
@@ -51,7 +53,7 @@ const Movie = () => {
         <>
             
         { movie && <> <div className="container">
-            <Back to={location.state}> 
+            <Back to={backLinkLocation.current}> 
             <BsArrowLeftShort />
             Go Back
             </Back>
